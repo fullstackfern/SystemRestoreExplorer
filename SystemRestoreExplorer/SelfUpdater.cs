@@ -221,6 +221,7 @@ namespace SystemRestoreExplorer
 
         private bool CheckForNewVersion()
         {
+      return false;
             try
             {
                 // Provide the XmlTextReader with the URL of our xml document  
@@ -241,7 +242,7 @@ namespace SystemRestoreExplorer
 
             // Get the running version  
             currentVersion = Assembly.GetExecutingAssembly().GetName().Version;
-            Debug.WriteLine(String.Format("Current version: {0}, Server version: {1}", currentVersion.ToString(), serverVersion.ToString()));
+            //Debug.WriteLine(String.Format("Current version: {0}, Server version: {1}", currentVersion.ToString(), serverVersion.ToString()));
                 
             // Compare the versions  
             if (currentVersion.CompareTo(serverVersion) < 0)
